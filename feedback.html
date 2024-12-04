@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ececec;
+        }
+
+        .header {
+            background-color: rgb(221, 221, 221);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+        }
+
+        .header img {
+            width: 100%;
+            height: 210px;
+            border-end-start-radius: 60px;
+            border-end-end-radius: 60px;
+        }
+
+        .header h1 {
+            font-size: 100px;
+            color: #333;
+            text-align: right;
+            padding-right: 320px;
+            font-family: serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .nav {
+            background-color: rgb(255, 145, 0);
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            padding-left: 180px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .nav a.active {
+            background-color: #555;
+            border-radius: 20px
+        }
+
+        .nav a:hover {
+            background-color: #555;
+            border-radius: 20px
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #success-message {
+            display: none;
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <img src="Images/wildlife wonder.png" alt="Logo">
+        </div>
+        <div>
+            <h1>Wildlife Wonders</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="menu">
+            <div class="dropdown-content">
+                <a href="home.html">Home</a>
+                <a href="National_park.html">National Park</a>
+                <a href="birding_park.html">Birding Areas</a>
+                <a href="heritage.html">Heritage</a>
+                <a href="feedback.html" class="active">Feedback</a>
+                <a href="Registration.html">Registration</a>
+                <a href="Contact_us.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Give Your Feedback</h1>
+        <form id="feedbackForm"
+            action="https://script.google.com/a/macros/gnu.ac.in/s/AKfycbwRkXKxac7RlbjRrdKL-D_kUjaCqmlWZFV9zt5BPNmlilERPeIYlzFajqBSD-BPz8BD_Q/exec"
+            method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="m_number">Mobile Number:</label>
+                <input type="tel" id="m_number" name="m_number" required>
+            </div>
+            <div class="form-group">
+                <label for="email_address">Email Address:</label>
+                <input type="email" id="email_address" name="email_address" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p class="success-message" id="successMessage">Thank you for your feedback!</p>
+
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/a/macros/gnu.ac.in/s/AKfycbwRkXKxac7RlbjRrdKL-D_kUjaCqmlWZFV9zt5BPNmlilERPeIYlzFajqBSD-BPz8BD_Q/exec';
+        const form = document.getElementById('feedbackForm');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+
+</html>

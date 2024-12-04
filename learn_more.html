@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Visit best places of India">
+    <meta name="author" content="Group-Mehul-Ami-Krishna">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Wildlife Wonders</title>
+    <link rel="stylesheet" href="">
+    <link rel="icon" href="wildlife wonder (1).png" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <img src="Images/wildlife wonder.png" alt="Logo">
+        </div>
+        <div>
+            <h1>Wildlife Wonders</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="menu">
+            <div class="dropdown-content">
+                <a href="home.html" class="active">Home</a>
+                <a href="National_park.html">National Park</a>
+                <a href="birding_park.html">Birding Areas</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="Registration.html">Registration</a>
+                <a href="Contact us">Contact us </a>
+            </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+    <div class="bot">
+        <div class="description">
+            <p>India is one of the most biodiverse regions and is home to a large variety of wildlife. It is one of the
+                17 megadiverse countries and includes three of the world's 36 biodiversity hotspots – the Western Ghats,
+                the Eastern Himalayas, and the Indo-Burma hotspot.</p>
+            <p>About 24.6% of the total land area is covered by forests. It has various ecosystems ranging from the high
+                altitude Himalayas, tropical evergreen forests along the Western Ghats, desert in the north-west,
+                coastal plains and mangroves along the peninsular region. India lies within the Indomalayan realm and is
+                home to about 7.6% of mammal, 14.7% of amphibian, 6% of bird, 6.2% of reptilian, and 6.2% of flowering
+                plant species.</p>
+            <p>Human encroachment, deforestation and poaching are significant challenges that threaten the existence of
+                certain fauna and flora. Government of India established a system of national parks and protected areas
+                in 1935, which have been subsequently expanded to nearly 1022 protected areas by 2023. India has enacted
+                the Wildlife Protection Act of 1972 and special projects such as Project Tiger, Project Elephant and
+                Project Dolphin for protection of critical species.</p>
+        </div>
+    </div>
+</body>
+
+
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ececec;
+    }
+
+    .header {
+        background-color: rgb(221, 221, 221);
+        color: #333;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    .header img {
+        width: 100%;
+        height: 210px;
+        border-end-start-radius: 60px;
+        border-end-end-radius: 60px;
+    }
+
+    .header h1 {
+        font-size: 100px;
+        color: #333;
+        text-align: right;
+        padding-right: 320px;
+        font-family: serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    .nav {
+        background-color: rgb(255, 145, 0);
+        color: #ffffff;
+        padding: 10px 0;
+        text-align: center;
+        padding-left: 180px;
+    }
+
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+
+    .nav a.active {
+        background-color: #555;
+        border-radius: 20px
+    }
+
+    .nav a:hover {
+        background-color: #555;
+        border-radius: 20px
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu a {
+        margin: 0 10px;
+    }
+
+    .menu label {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            flex-direction: column;
+        }
+
+        .menu label {
+            display: block;
+            cursor: pointer;
+        }
+
+        .menu .menu-items {
+            display: none;
+        }
+
+        .menu .menu-items.show {
+            display: block;
+        }
+    }
+
+    .bot {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+
+    .description {
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        text-align: justify;
+        background-color: #dcd8d8;
+        /* Gray background */
+        border-radius: 40px;
+        /* Rounded corners */
+        border: 2px solid #8e8c8c;
+        /* Border */
+        padding-left: 30px;
+        /* Left padding */
+        padding-right: 30px;
+        /* Right padding */
+        padding-top: 10px;
+    }
+</style>
